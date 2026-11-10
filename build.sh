@@ -23,5 +23,5 @@ cd $SCRIPT_DIR
 export CC=`which zcc`
 export CXX=`which z++`
 
-[ -e build ] || cmake -B build -DCMAKE_BUILD_TYPE=Release -DGOOSE_BUILTIN_LIBS=all
+[ -e build ] || cmake -GNinja -B build -DCMAKE_BUILD_TYPE=Release -DGOOSE_BUILTIN_LIBS=all
 cmake --build build --config Release
