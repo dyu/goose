@@ -23,4 +23,4 @@ mkdir -p build-zb
 SRC_FILE=`basename $1`
 SRC_NAME="${SRC_FILE%.*}"
 
-goose build $@ --cc "$(which zcc)" -o build-zb/$SRC_NAME
+goose build $@ --cc "$(which zcc)" -o build-zb/$SRC_NAME --standalone
