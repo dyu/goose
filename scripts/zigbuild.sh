@@ -18,9 +18,22 @@ else
     SCRIPT_DIR=`dirname $F`
 fi
 
+UNAME=`uname`
+case "$UNAME" in
+    Darwin)
+    SUFFIX=''
+    ;;
+    Linux)
+    SUFFIX=''
+    ;;
+    *)
+    SUFFIX='.exe'
+    ;;
+esac
+
 mkdir -p build-zb
 
 SRC_FILE=`basename $1`
 SRC_NAME="${SRC_FILE%.*}"
 
-goose build $@ --cc "$(which zcc)" -o build-zb/$SRC_NAME --standalone
+goose build $@ --cc "$(which zcc)$SUFFIX" -o build-zb/$SRC_NAME --standalone
