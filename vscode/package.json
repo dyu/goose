@@ -6,7 +6,7 @@
   "publisher": "aardappel",
   "license": "Apache-2.0",
   "repository": { "type": "git", "url": "https://github.com/aardappel/goose.git", "directory": "vscode" },
-  "engines": { "vscode": "^1.85.0" },
+  "engines": { "vscode": "^1.79.0" },
   "categories": ["Programming Languages", "Snippets"],
   "keywords": ["goose"],
   "main": "./dist/extension.js",
@@ -26,7 +26,7 @@
     "vscode:prepublish": "npm test"
   },
   "dependencies": {
-    "vscode-languageclient": "^9.0.1"
+    "vscode-languageclient": "8.2.0-next.3"
   },
   "devDependencies": {
     "@vscode/vsce": "^3.6.2",
