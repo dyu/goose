@@ -18,6 +18,7 @@ else
     SCRIPT_DIR=`dirname $F`
 fi
 
+OUT_DIR_SUFFIX='cb'
 UNAME=`uname`
 case "$UNAME" in
     Darwin)
@@ -28,12 +29,16 @@ case "$UNAME" in
     ;;
     *)
     SUFFIX='.exe'
+    if [ "$CL" = '1' ]; then
+        SUFFIX='-cl.exe'
+        OUT_DIR_SUFFIX='cl'
+    fi
     ;;
 esac
 
-mkdir -p build-cb
+mkdir -p build-$OUT_DIR_SUFFIX
 
 SRC_FILE=`basename $1`
 SRC_NAME="${SRC_FILE%.*}"
 
-goose build $@ --cc "$(which clang)$SUFFIX" -o build-cb/$SRC_NAME --standalone
+goose build $@ --cc "$(which clang)$SUFFIX" -o build-$OUT_DIR_SUFFIX/$SRC_NAME --standalone
