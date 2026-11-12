@@ -29,7 +29,7 @@ case "$UNAME" in
     ;;
     *)
     SUFFIX='.exe'
-    if [ "$CL" = '1' ]; then
+    if [ "$CLANG_CL" = '1' ]; then
         SUFFIX='-cl.exe'
         OUT_DIR_SUFFIX='cl'
     fi
