@@ -18,19 +18,6 @@ else
     SCRIPT_DIR=`dirname $F`
 fi
 
-UNAME=`uname`
-case "$UNAME" in
-    Darwin)
-    SUFFIX=''
-    ;;
-    Linux)
-    SUFFIX=''
-    ;;
-    *)
-    SUFFIX='.exe'
-    ;;
-esac
-
 mkdir -p build-wb
 
 SRC_FILE=`basename $1`
