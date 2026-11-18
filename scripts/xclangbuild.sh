@@ -28,6 +28,8 @@ SRC_NAME="${SRC_FILE%.*}"
 # pixi global install xclang -c conda-forge -c https://conda.clice.io
 # ~/.pixi/envs/xclang/opt/xclang/bin/xclang sdk fetch macos --accept-license
 # ~/.pixi/envs/xclang/opt/xclang/bin/xclang sdk fetch windows --accept-license
+# legacy windows
+# ~/.pixi/envs/xclang/opt/xclang/bin/xclang sdk fetch windows --preset windows-2022 --accept-license
 XCLANG_HOME=~/.pixi/envs/xclang/opt/xclang
 
 SUFFIX=''
